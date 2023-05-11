@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +7,45 @@
     <title>Clone NewM</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/normalize.css">
+    <style>
+        nav.menu { /*Avô*/
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:center;
+            border: 1px solid red; /*somente para ilustrar*/
+            align-items: center;
+        }
+        .menu-item { /*pai*/
+            border: 2px solid green; /* somente para ilustrar */
+            padding:5px;
+            margin: 5px;
+        }
+        .list {
+            display:flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        .list-item {
+            border:2px solid blue;
+            padding: 5px;
+            margin: 5px;
+        }
+
+    </style>
 </head>
 
 <body>
     <header>
-        <nav class="menu-principal">
-            <img src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewM" width="120" height="40">
-            <ul>
-                <li>home</li>
-                <li>quem somos</li>
-                <li>soluções</li>
-                <li>aconteceu</li>
-                <li>cases</li>
-                <li>vagas</li>
-                <li>contato</li>
+        <nav class="menu">
+            <img class="menu-item" src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewM" width="120" height="40">
+            <ul class="menu-item list">
+                <li class="list-item">home</li>
+                <li class="list-item">quem somos</li>
+                <li class="list-item">soluções</li>
+                <li class="list-item">aconteceu</li>
+                <li class="list-item">cases</li>
+                <li class="list-item">vagas</li>
+                <li class="list-item">contato</li>
             </ul>
         </nav>
     </header>
