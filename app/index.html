@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,80 +11,99 @@
     <style>
         * {
             box-sizing: border-box;
-            margin:0;
+            margin: 0;
             padding: 0;
         }
+
         h1 {
-            color:#053E8B;
+            color: #053E8B;
         }
-        nav.menu { /*Avô*/
-            display:flex;
+
+        nav.menu {
+            /*Avô*/
+            display: flex;
             flex-wrap: wrap;
-            justify-content:center;
-            border: 1px solid red; /*somente para ilustrar*/
+            justify-content: center;
+            border: 1px solid red;
+            /*somente para ilustrar*/
             align-items: center;
         }
-        .menu-item { /*pai*/
-            border: 2px solid green; /* somente para ilustrar */
-            padding:5px;
-            margin: 5px;
-        }
-        .list {
-            display:flex;
-            flex-wrap: wrap;
-            list-style: none;
-        }
-        .list-item {
-            border:2px solid blue;
+
+        .menu-item {
+            /*pai*/
+            border: 2px solid green;
+            /* somente para ilustrar */
             padding: 5px;
             margin: 5px;
         }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .list-item {
+            border: 2px solid blue;
+            padding: 5px;
+            margin: 5px;
+        }
+
         .sectionOne {
-            display:flex;
+            display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             align-content: center;
-            border: 1px solid red; /*somente para ilustrar*/
-           padding:15px;
-           /* margin: 15px; */
+            border: 1px solid red;
+            /*somente para ilustrar*/
+            padding: 15px;
+            /* margin: 15px; */
         }
+
         .imagem {
             width: 100%;
             height: 100%;
         }
+
         .texto {
             border: 1px solid green;
             width: 600px;
         }
+
         .titulo {
             border: 1px solid green;
             width: 390px;
         }
+
         .cards {
             display: flex;
-            
             padding: 40px;
             flex-wrap: wrap;
-            justify-content: center; 
+            justify-content: center;
         }
+
         .card {
             display: flex;
             flex-direction: column;
             flex: column wrap;
             width: 320px;
-            height: 320px;
+            /* height: 320px; */
+            height:400px;
             border: 1px solid green;
             justify-content: space-between;
             padding: 15px;
         }
+
         .title-card {
-            color:#053E8B;
+            color: #053E8B;
             text-transform: uppercase;
-            
+
         }
+
         .paragraph-card {
             color: #696969;
         }
+
         .link-card {
             text-decoration: none;
             font-size: .9rem;
@@ -91,9 +111,11 @@
             font-weight: 700;
             color: #696969;
         }
+
         .sectionTwo {
             border: 1px solid red;
         }
+
         .container {
             display: flex;
             padding: 40px;
@@ -101,21 +123,186 @@
             border: 1px solid green;
             justify-content: center;
         }
+
         .container-btn {
             padding: 17px 55px 17px 55px;
             background-color: #577ff9;
-            border:none;
+            border: none;
             color: #fff;
         }
-    
 
+        .sectionThree {
+            display: flex;
+            height: 600px;
+            color: #fff;
+            border: 1px solid red;
+            background-image: url(https://newm.com.br/images/img-home-about-us-md.jpg);
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .sectionThreeChildOne {
+            height: 400px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+
+        .sectionThreeChildOne-subtitle-child-two,
+        .sectionThreeChildOne-subtitle-child-one {
+            font-size: 58px;
+            line-height: 87px;
+            position: relative;
+        }
+
+        .sectionThreeChildOne-subtitle-child-two::after {
+            content: '';
+            position: absolute;
+            padding: 3px;
+            width: 23px;
+            background-color: #fff;
+            top: 30px;
+            right: 79px;
+        }
+
+        .sectionThreeChildOne-subtitle-child-two::before {
+            content: '';
+            position: absolute;
+            padding: 3px;
+            height: 23px;
+            background-color: #fff;
+            top: 19px;
+            right: 90px;
+        }
+
+        .sectionThreeChildOne-paragraph {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .sectionThreeChildOne-container-btn {
+            padding: 17px 55px 17px 55px;
+            background-color: transparent;
+            border: 2px solid #f8f9fa;
+            color: #f8f9fa;
+            text-transform: uppercase;
+        }
+
+        .sectionThreeChildTwo {
+            visibility: hidden;
+        }
+
+        .sectionThreeChildOne-subtitle-child-one::after {
+            content: '';
+            position: absolute;
+            padding: 3px;
+            width: 23px;
+            background-color: #fff;
+            top: 30px;
+            right: 234px;
+        }
+
+        .sectionThreeChildOne-subtitle-child-one::before {
+            content: '';
+            position: absolute;
+            padding: 3px;
+            height: 23px;
+            background-color: #fff;
+            top: 19px;
+            right: 245px;
+        }
+
+        /* before 23-19-245 after 23 30 234 */
+        .footer {
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-childOne {
+            display: flex;
+            /* padding: 100px; */
+
+        }
+
+        .footer-childTwo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .footer-childOne-list li {
+            list-style: none;
+        }
+
+        .footer-childOne-container {
+            padding: 20px;
+        }
+
+        .sectionSix {
+            display: flex;
+            flex-flow: column wrap;
+          
+        }
+
+        .sectionSix-header {
+            background-image: url(https://newm.com.br/images/img-about-us-cases-md.jpg);
+            color: #fff;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            padding:100px;
+        }
+
+        .sectionSix-main {
+            /* padding:100px;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap; */
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 20px;
+            margin: 20px;
+            /* perguntar como fazer isso com flexbox */
+        }
+        .block {
+            padding: 20px;
+            border: 1px solid red;
+        }
+        .sectionSix-main-childOne {
+          /* background-color: #FAFAFA; */
+         
+        }
+        .sectionSix-main-childTwo {
+            /* background-color: #FAFAFA; */
+        }
+        .block {
+            display: flex;
+            background-color: #FAFAFA;
+            height: 180px;
+            margin: 10px;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .block-btn {
+            padding: 17px 55px 17px 55px;
+            background-color: #577ff9;
+            border: none;
+            color: #fff;
+        }
+        .sectionFour {
+            visibility: hidden;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <nav class="menu">
-            <img  src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewM" width="120" height="40">
+            <img src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewM" width="120" height="40">
             <ul class="menu-item list">
                 <li class="list-item">home</li>
                 <li class="list-item">quem somos</li>
@@ -145,24 +332,29 @@
             <div class="cards">
                 <div class="card">
                     <h3 class="title-card">Tecnologia para vendas de consórcio</h2>
-                    <p class="paragraph-card">A NewM desenvolveu uma tecnologia para gestão e operação de vendas 100% pensada no mercado de
-                        administradoras de consórcio. Os vendedores farão as vendas através de celular, tablet ou computador
-                        e os...</p>
-                    <a class="link-card" href="#">Conheça</a>
+                        <p class="paragraph-card">A NewM desenvolveu uma tecnologia para gestão e operação de vendas
+                            100% pensada no mercado de
+                            administradoras de consórcio. Os vendedores farão as vendas através de celular, tablet ou
+                            computador
+                            e os...</p>
+                        <a class="link-card" href="#">Conheça</a>
                 </div>
                 <div class="card">
                     <h3 class="title-card">Aplicativo para Clientes de consórcio</h2>
-                    <p class="paragraph-card">Aplicativo Integrado ao ERP para autoatendimento do consorciado. Fidelize, surpreenda e engaje o seu
-                        cliente, Ofereça uma experiência rica e totalmente adaptada ao novo consumidor. Dentre as princi...
-                    </p>
-                    <a class="link-card" href="#">Conheça</a>
+                        <p class="paragraph-card">Aplicativo Integrado ao ERP para autoatendimento do consorciado.
+                            Fidelize, surpreenda e engaje o seu
+                            cliente, Ofereça uma experiência rica e totalmente adaptada ao novo consumidor. Dentre as
+                            princi...
+                        </p>
+                        <a class="link-card" href="#">Conheça</a>
                 </div>
                 <div class="card">
                     <h3 class="title-card">Gerador de contratos com aceite eletrônico</h2>
-                    <p class="paragraph-card">Tecnologia brasileira para envio de contratos e coleta do aceite eletrônico. Funcional para contratos
-                        de venda de cota de consórcio, contemplação, departamento pessoal e mais. Amparado na Lei Nº
-                        14.06...</p>
-                    <a class="link-card" href="#">Conheça</a>
+                        <p class="paragraph-card">Tecnologia brasileira para envio de contratos e coleta do aceite
+                            eletrônico. Funcional para contratos
+                            de venda de cota de consórcio, contemplação, departamento pessoal e mais. Amparado na Lei Nº
+                            14.06...</p>
+                        <a class="link-card" href="#">Conheça</a>
                 </div>
             </div>
 
@@ -170,30 +362,41 @@
                 <button class="container-btn" type="submit">Baixe nossa apresentação Institucional</button>
             </div>
         </section>
-        <section>
-            <img class="imagem"  src="https://newm.com.br/images/img-home-about-us-md.jpg" alt="">
-            <h2 class="titulo-secundario">Quem Somos</h2>
-            <span>400.000</span>
-            <p>usuários utilizam nossas soluções</p>
-            <span>60</span>
-            <p>clientes</p>
-            <div>
-                <button type="submit">Link para abrir o video institucional</button>
+        <section class="sectionThree">
+            <div class="sectionThreeChildOne">
+                <h2 class="sectionThreeChildOne-title">Quem Somos</h2>
+                <div>
+                    <span class="sectionThreeChildOne-subtitle-child-one">400.000</span>
+                    <p class="sectionThreeChildOne-paragraph">usuários utilizam nossas soluções</p>
+                </div>
+
+                <div>
+                    <span class="sectionThreeChildOne-subtitle-child-two">60</span>
+                    <p class="sectionThreeChildOne-paragraph">clientes</p>
+                </div>
+
+                <div class="sectionThreeChildOne-container">
+                    <button class="sectionThreeChildOne-container-btn" type="submit">Assista Nosso vídeo
+                        institucional</button>
+                </div>
             </div>
-            <div>
+
+            <div class="sectionThreeChildTwo">
                 <button type="submit">Assista nosso vídeo institucional</button>
             </div>
         </section>
-        <section>
+
+        <section class="sectionFour">
             <h2 class="titulo-secundario">cases e clientes</h2>
             <div class="slider">
 
             </div>
         </section>
-        <section>
+        <!-- <section class="sectionFive">
             <h2 class="titulo-secundario">Aconteceu</h2>
             <div>
-                <img class="imagem" src="https://newm.com.br/media/294/conversions/w.729/h.410/q.80/fit.crop/imagem-do-whatsapp-de-2023-03-10-a-s-125952-336-thumb.jpg">
+                <img class="imagem"
+                    src="https://newm.com.br/media/294/conversions/w.729/h.410/q.80/fit.crop/imagem-do-whatsapp-de-2023-03-10-a-s-125952-336-thumb.jpg">
                 <h2 class="titulo-secundario">A edição newm portas abertas 2023 foi um sucesso!</h2>
                 <p>A edição NewM Portas Abertas 2023 foi um sucesso!</p>
                 <p>Reunimos pessoas de todo o Brasil, em um...</p>
@@ -212,63 +415,102 @@
                 <a href="#">Leia Mais</a>
             </div>
             <div>
-                <button type="submit">Vert todas as notícias</button>
+                <button type="submit">Ver todas as notícias</button>
+            </div>
+        </section> -->
+        <section class="sectionFive">
+            <h3 class="title-card">Aconteceu</h3>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://newm.com.br/media/294/conversions/w.729/h.410/q.80/fit.crop/imagem-do-whatsapp-de-2023-03-10-a-s-125952-336-thumb.jpg" alt="">
+                    <h3 class="title-card">A edição newm portas abertas 2023 foi um sucesso!</h2>
+                        <p>A edição NewM Portas Abertas 2023 foi um sucesso!</p>
+                        <p>Reunimos pessoas de todo o Brasil, em um...</p>
+                        <a href="#">Leia Mais</a>
+                </div>
+                <div class="card">
+                    <img src="https://newm.com.br/media/293/conversions/w.729/h.410/q.80/fit.crop/1-1-233-thumb.jpg" alt="">
+                    <h3 class="title-card">Programação do Newm portas Abertas</h2>
+                        <p>Nossas portas abertas já tem data e hora, anotem ai: 04/03/2023 às 09h.</p>
+                        <p>Quem aí também está ani...</p>
+                        <a href="#">Leia Mais</a>
+                </div>
+                <div class="card">
+                    <img src="https://newm.com.br/media/295/conversions/w.729/h.410/q.80/fit.crop/site-2-437-thumb.jpg" alt="">
+                    <h3 class="title-card">Save the date portas abertas!</h2>
+                        <p>Para os amantes de tecnologia e inovação, já anota ai:</p>
+                        <p>No dia 04 de março, teremos mais uma...</p>
+                        <a href="#">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="container">
+                <button class="container-btn" type="submit">Ver todas as notícias</button>
             </div>
         </section>
-        <section>
-            <header>
-                <h2 class="titulo-secundario">VAGAS</h2><img  src="https://newm.com.br/images/img-about-us-cases-md.jpg"
-                    alt="">
+        <section class="sectionSix">
+            <header class="sectionSix-header">
+                <h2 class="titulo-secundario">VAGAS</h2>
             </header>
-            <div>
-                <h2>Analista de sistemas</h2><button>Saiba Mais</button>
-            </div>
-            <div>
-                <h2>Coordenador de projetos</h2><button>Saiba Mais</button>
-            </div>
-            <div>
-                <h2>Desenvolvedor IOS</h2><button>Saiba mais</button>
-            </div>
-            <div>
-                <h2>DESENVOLVEDOR REACT NATIVE/ PHP - PLENO</h2><button>Saiba mais</button>
+            <div class="sectionSix-main">
+                <div class="sectionSix-main-childOne">
+                    <div class="block">
+                        <h3 class="title-card">Analista de sistemas</h3><button class="block-btn">Saiba Mais</button>
+                    </div>
+                    <div class="block">
+                        <h3 class="title-card">Coordenador de projetos</h3><button class="block-btn">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="sectionSix-main-childTwo">
+                    <div class="block">
+                        <h3 class="title-card">Desenvolvedor IOS</h3><button class="block-btn">Saiba mais</button>
+                    </div>
+                    <div class="block">
+                        <h3 class="title-card">Desenvolvedor React Native/ PHP - Pleno</h3><button class="block-btn">Saiba mais</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div><img  src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewMRodape" width="120" height="40"></div>
-        <div>
-            <h3>A NewM</h3>
-            <ul>
-                <li>Sobre nós</li>
-                <li>Vagas</li>
-                <li>Aconteceu</li>
-            </ul>
+
+    <!-- falta mais detalhes -->
+    <footer class="footer">
+        <div class="footer-childOne">
+            <div class="footer-childOne-container"><img src="https://newm.com.br/svg/logo-new-m.svg"
+                    alt="logoNewMRodape" width="120" height="40"></div>
+            <div class="footer-childOne-container">
+                <h3>A NewM</h3>
+                <ul class="footer-childOne-list">
+                    <li>Sobre nós</li>
+                    <li>Vagas</li>
+                    <li>Aconteceu</li>
+                </ul>
+            </div>
+            <div class="footer-childOne-container">
+                <h3>Produtos</h3>
+                <ul class="footer-childOne-list">
+                    <li>Tecnologia para vendas de consórcio</li>
+                    <li>Aplicativos para clientes de consórcio</li>
+                    <li>Gerador de contratos com aceite eletrônico</li>
+                </ul>
+            </div>
+            <div class="footer-childOne-container">
+                <h3>Atendimento</h3>
+                <ul class="footer-childOne-list">
+                    <li>atendimento@newm.com.br</li>
+                    <li>newm.movidesk.com.br</li>
+                    <li>(11) 2626-5514</li>
+                </ul>
+            </div>
+            <div class="footer-childOne-container">
+                <ul class="footer-childOne-list">
+                    <li>Fundada com ❤️ em São josé do Rio Preto</li>
+                    <li>Hoje somos uma empresa com equipe toda remota e temos um escritório em:</li>
+                    <li>R. Ipiranga, 4520 - sl 13, Jd. Alto Rio Preto, São José do Rio Preto - SP, 15020-040</li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <h3>Produtos</h3>
-            <ul>
-                <li>Tecnologia para vendas de consórcio</li>
-                <li>Aplicativos para clientes de consórcio</li>
-                <li>Gerador de contratos com aceite eletrônico</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Atendimento</h3>
-            <ul>
-                <li>atendimento@newm.com.br</li>
-                <li>newm.movidesk.com.br</li>
-                <li>(11) 2626-5514</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li>Fundada com ❤️ em São josé do Rio Preto</li>
-                <li>Hoje somos uma empresa com equipe toda remota e temos um escritório em:</li>
-                <li>R. Ipiranga, 4520 - sl 13, Jd. Alto Rio Preto, São José do Rio Preto - SP, 15020-040</li>
-            </ul>
-        </div>
-        <hr>
-        <div>
+        <div class="footer-childTwo">
             <p>Acesse nossas redes sociais:</p>
             <div>
                 <a href="#">Facebook</a>
