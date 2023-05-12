@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <style>
+        * {
+            box-sizing: border-box;
+            margin:0;
+            padding: 0;
+        }
+        h1 {
+            color:#053E8B;
+        }
         nav.menu { /*Avô*/
             display:flex;
             flex-wrap: wrap;
@@ -30,6 +38,76 @@
             padding: 5px;
             margin: 5px;
         }
+        .sectionOne {
+            display:flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            border: 1px solid red; /*somente para ilustrar*/
+           padding:15px;
+           /* margin: 15px; */
+        }
+        .imagem {
+            width: 100%;
+            height: 100%;
+        }
+        .texto {
+            border: 1px solid green;
+            width: 600px;
+        }
+        .titulo {
+            border: 1px solid green;
+            width: 390px;
+        }
+        .cards {
+            display: flex;
+            
+            padding: 40px;
+            flex-wrap: wrap;
+            justify-content: center; 
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            flex: column wrap;
+            width: 320px;
+            height: 320px;
+            border: 1px solid green;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .title-card {
+            color:#053E8B;
+            text-transform: uppercase;
+            
+        }
+        .paragraph-card {
+            color: #696969;
+        }
+        .link-card {
+            text-decoration: none;
+            font-size: .9rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #696969;
+        }
+        .sectionTwo {
+            border: 1px solid red;
+        }
+        .container {
+            display: flex;
+            padding: 40px;
+            margin: 40px;
+            border: 1px solid green;
+            justify-content: center;
+        }
+        .container-btn {
+            padding: 17px 55px 17px 55px;
+            background-color: #577ff9;
+            border:none;
+            color: #fff;
+        }
+    
 
     </style>
 </head>
@@ -37,7 +115,7 @@
 <body>
     <header>
         <nav class="menu">
-            <img class="menu-item" src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewM" width="120" height="40">
+            <img  src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewM" width="120" height="40">
             <ul class="menu-item list">
                 <li class="list-item">home</li>
                 <li class="list-item">quem somos</li>
@@ -50,47 +128,50 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Tecnologia e Resultados</h1>
-            <p>
+        <section class="sectionOne">
+            <h1 class="titulo">Tecnologia e Resultados</h1>
+            <p class="texto">
                 Somos especialistas no desenvolvimento de projetos de tecnologia e inovação. Atuamos no mercado de
                 serviços financeiros, principalmente apoiando administradoras de consórcio.
                 Dentre nossas entregas estão: Uma plataforma mobile e web para gestão e operação de equipes comerciais,
                 um fantástico aplicativo para consorciados e uma tecnologia totalmente nova para assinatura eletrônica
                 de documentos.
             </p>
-            <div>
-                <img src="https://newm.com.br/images/img-home-man-md.jpg" alt="">
+        </section>
+        <div class="containerImagem">
+            <img class="imagem" src="https://newm.com.br/images/img-home-man-md.jpg" alt="">
+        </div>
+        <section class="sectionTwo">
+            <div class="cards">
+                <div class="card">
+                    <h3 class="title-card">Tecnologia para vendas de consórcio</h2>
+                    <p class="paragraph-card">A NewM desenvolveu uma tecnologia para gestão e operação de vendas 100% pensada no mercado de
+                        administradoras de consórcio. Os vendedores farão as vendas através de celular, tablet ou computador
+                        e os...</p>
+                    <a class="link-card" href="#">Conheça</a>
+                </div>
+                <div class="card">
+                    <h3 class="title-card">Aplicativo para Clientes de consórcio</h2>
+                    <p class="paragraph-card">Aplicativo Integrado ao ERP para autoatendimento do consorciado. Fidelize, surpreenda e engaje o seu
+                        cliente, Ofereça uma experiência rica e totalmente adaptada ao novo consumidor. Dentre as princi...
+                    </p>
+                    <a class="link-card" href="#">Conheça</a>
+                </div>
+                <div class="card">
+                    <h3 class="title-card">Gerador de contratos com aceite eletrônico</h2>
+                    <p class="paragraph-card">Tecnologia brasileira para envio de contratos e coleta do aceite eletrônico. Funcional para contratos
+                        de venda de cota de consórcio, contemplação, departamento pessoal e mais. Amparado na Lei Nº
+                        14.06...</p>
+                    <a class="link-card" href="#">Conheça</a>
+                </div>
+            </div>
+
+            <div class="container">
+                <button class="container-btn" type="submit">Baixe nossa apresentação Institucional</button>
             </div>
         </section>
         <section>
-            <div>
-                <h2 class="titulo-secundario">Tecnologia para vendas de consórcio</h2>
-                <p>A NewM desenvolveu uma tecnologia para gestão e operação de vendas 100% pensada no mercado de
-                    administradoras de consórcio. Os vendedores farão as vendas através de celular, tablet ou computador
-                    e os...</p>
-                <a href="#">Conheça</a>
-            </div>
-            <div>
-                <h2 class="titulo-secundario">Aplicativo para Clientes de consórcio</h2>
-                <p>Aplicativo Integrado ao ERP para autoatendimento do consorciado. Fidelize, surpreenda e engaje o seu
-                    cliente, Ofereça uma experiência rica e totalmente adaptada ao novo consumidor. Dentre as princi...
-                </p>
-                <a href="#">Conheça</a>
-            </div>
-            <div>
-                <h2 class="titulo-secundario">Gerador de contratos com aceite eletrônico</h2>
-                <p>Tecnologia brasileira para envio de contratos e coleta do aceite eletrônico. Funcional para contratos
-                    de venda de cota de consórcio, contemplação, departamento pessoal e mais. Amparado na Lei Nº
-                    14.06...</p>
-                <a href="#">Conheça</a>
-            </div>
-            <div>
-                <button type="submit">Baixe nossa apresentação Institucional</button>
-            </div>
-        </section>
-        <section>
-            <img src="https://newm.com.br/images/img-home-about-us-md.jpg" alt="">
+            <img class="imagem"  src="https://newm.com.br/images/img-home-about-us-md.jpg" alt="">
             <h2 class="titulo-secundario">Quem Somos</h2>
             <span>400.000</span>
             <p>usuários utilizam nossas soluções</p>
@@ -112,8 +193,7 @@
         <section>
             <h2 class="titulo-secundario">Aconteceu</h2>
             <div>
-                <img
-                    src="https://newm.com.br/media/294/conversions/w.729/h.410/q.80/fit.crop/imagem-do-whatsapp-de-2023-03-10-a-s-125952-336-thumb.jpg">
+                <img class="imagem" src="https://newm.com.br/media/294/conversions/w.729/h.410/q.80/fit.crop/imagem-do-whatsapp-de-2023-03-10-a-s-125952-336-thumb.jpg">
                 <h2 class="titulo-secundario">A edição newm portas abertas 2023 foi um sucesso!</h2>
                 <p>A edição NewM Portas Abertas 2023 foi um sucesso!</p>
                 <p>Reunimos pessoas de todo o Brasil, em um...</p>
@@ -137,7 +217,7 @@
         </section>
         <section>
             <header>
-                <h2 class="titulo-secundario">VAGAS</h2><img src="https://newm.com.br/images/img-about-us-cases-md.jpg"
+                <h2 class="titulo-secundario">VAGAS</h2><img  src="https://newm.com.br/images/img-about-us-cases-md.jpg"
                     alt="">
             </header>
             <div>
@@ -155,7 +235,7 @@
         </section>
     </main>
     <footer>
-        <div><img src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewMRodape" width="120" height="40"></div>
+        <div><img  src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewMRodape" width="120" height="40"></div>
         <div>
             <h3>A NewM</h3>
             <ul>
