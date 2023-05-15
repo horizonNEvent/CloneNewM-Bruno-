@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <style>
+        body, h1, h2, ul,p ,ul, li, a {
+            margin: 0;
+            padding: 0;
+        }
         * {
             box-sizing: border-box;
             margin: 0;
@@ -19,35 +23,7 @@
             color: #053E8B;
         }
 
-        nav.menu {
-            /*Avô*/
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            border: 1px solid red;
-            /*somente para ilustrar*/
-            align-items: center;
-        }
-
-        .menu-item {
-            /*pai*/
-            border: 2px solid green;
-            /* somente para ilustrar */
-            padding: 5px;
-            margin: 5px;
-        }
-
-        .list {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-        }
-
-        .list-item {
-            border: 2px solid blue;
-            padding: 5px;
-            margin: 5px;
-        }
+       
 
         .sectionOne {
             display: flex;
@@ -67,12 +43,12 @@
 
         .texto {
             border: 1px solid green;
-            width: 600px;
+            /* width: 600px; */
         }
 
         .titulo {
             border: 1px solid green;
-            width: 390px;
+            /* width: 390px; */
         }
 
         .cards {
@@ -136,7 +112,7 @@
             height: 600px;
             color: #fff;
             border: 1px solid red;
-            background-image: url(https://newm.com.br/images/img-home-about-us-md.jpg);
+            background-image: url('https://newm.com.br/images/img-home-about-us-md.jpg');
             justify-content: space-around;
             align-items: center;
         }
@@ -216,29 +192,45 @@
         .footer {
             border: 1px solid red;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-flow: row wrap;
         }
 
-        .footer-childOne {
+   
+         .footer-childOne {
             display: flex;
-            /* padding: 100px; */
-
+            flex-basis: 330px;
+            flex-grow: 1;
+            font-size: 14px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        } 
+        .footer-childOne-list {
+            font-size: 12px;
         }
-
+   
+        /*
         .footer-childTwo {
             display: flex;
+            
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            /* padding: 20px; 
         }
-
+        */
         .footer-childOne-list li {
             list-style: none;
         }
 
         .footer-childOne-container {
-            padding: 20px;
+            /* padding: 20px; */
+        }
+        .footer-childOne-container {
+            flex-grow: 1;
+            border: 1px solid blue;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
         }
 
         .sectionSix {
@@ -257,14 +249,7 @@
         }
 
         .sectionSix-main {
-            /* padding:100px;
-            justify-content: center;
-            display: flex;
-            flex-wrap: wrap; */
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 20px;
-            margin: 20px;
+            display:flex;
             /* perguntar como fazer isso com flexbox */
         }
         .block {
@@ -272,11 +257,10 @@
             border: 1px solid red;
         }
         .sectionSix-main-childOne {
-          /* background-color: #FAFAFA; */
-         
+         width: 50%;
         }
         .sectionSix-main-childTwo {
-            /* background-color: #FAFAFA; */
+            width: 50%;
         }
         .block {
             display: flex;
@@ -297,6 +281,41 @@
             visibility: hidden;
         }
     </style>
+    <style>
+       
+        nav.menu {
+            display: flex;
+            border: 1px solid red;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 768px){
+            .list, nav.menu{
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+
+        .menu-item {
+            /*pai*/
+            border: 2px solid green;
+            /* somente para ilustrar */
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .list-item {
+            border: 2px solid blue;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -304,6 +323,8 @@
         <nav class="menu">
             <img src="https://newm.com.br/svg/logo-new-m.svg" alt="logoNewM" width="120" height="40">
             <ul class="menu-item list">
+                <!-- <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label> -->
                 <li class="list-item">home</li>
                 <li class="list-item">quem somos</li>
                 <li class="list-item">soluções</li>
@@ -392,32 +413,7 @@
 
             </div>
         </section>
-        <!-- <section class="sectionFive">
-            <h2 class="titulo-secundario">Aconteceu</h2>
-            <div>
-                <img class="imagem"
-                    src="https://newm.com.br/media/294/conversions/w.729/h.410/q.80/fit.crop/imagem-do-whatsapp-de-2023-03-10-a-s-125952-336-thumb.jpg">
-                <h2 class="titulo-secundario">A edição newm portas abertas 2023 foi um sucesso!</h2>
-                <p>A edição NewM Portas Abertas 2023 foi um sucesso!</p>
-                <p>Reunimos pessoas de todo o Brasil, em um...</p>
-                <a href="#">Leia Mais</a>
-            </div>
-            <div>
-                <h2 class="titulo-secundario">Programação do Newm portas Abertas</h2>
-                <p>Nossas portas abertas já tem data e hora, anotem ai: 04/03/2023 às 09h.</p>
-                <p>Quem aí também está ani...</p>
-                <a href="#">Leia Mais</a>
-            </div>
-            <div>
-                <h2 class="titulo-secundario">Save the date portas abertas!</h2>
-                <p>Para os amantes de tecnologia e inovação, já anota ai:</p>
-                <p>No dia 04 de março, teremos mais uma...</p>
-                <a href="#">Leia Mais</a>
-            </div>
-            <div>
-                <button type="submit">Ver todas as notícias</button>
-            </div>
-        </section> -->
+        
         <section class="sectionFive">
             <h3 class="title-card">Aconteceu</h3>
             <div class="cards">
@@ -476,8 +472,11 @@
     <!-- falta mais detalhes -->
     <footer class="footer">
         <div class="footer-childOne">
-            <div class="footer-childOne-container"><img src="https://newm.com.br/svg/logo-new-m.svg"
-                    alt="logoNewMRodape" width="120" height="40"></div>
+            <div class="footer-childOne-container">
+                <img src="https://newm.com.br/svg/logo-new-m.svg"alt="logoNewMRodape" width="170" height="90">
+                <p>Tecnologia e inovação</p>
+                <p>para serviços financeiros</p>
+            </div>
             <div class="footer-childOne-container">
                 <h3>A NewM</h3>
                 <ul class="footer-childOne-list">
@@ -505,19 +504,20 @@
             <div class="footer-childOne-container">
                 <ul class="footer-childOne-list">
                     <li>Fundada com ❤️ em São josé do Rio Preto</li>
-                    <li>Hoje somos uma empresa com equipe toda remota e temos um escritório em:</li>
+                    <li>Hoje somos uma empresa com <strong>equipe toda remota</strong> e temos um escritório em:</li>
                     <li>R. Ipiranga, 4520 - sl 13, Jd. Alto Rio Preto, São José do Rio Preto - SP, 15020-040</li>
                 </ul>
             </div>
         </div>
-        <div class="footer-childTwo">
+        <hr>
+        <!-- <div class="footer-childTwo">
             <p>Acesse nossas redes sociais:</p>
             <div>
                 <a href="#">Facebook</a>
                 <a href="#">Instagram</a>
                 <a href="#">Linkedin</a>
             </div>
-        </div>
+        </div> -->
     </footer>
 </body>
 
